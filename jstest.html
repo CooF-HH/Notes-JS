@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title> new document </title>  
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>   
+  <script type="text/javascript">  
+     function openWindow(){
+    var mywin=confirm("是否创建新窗口?");
+    var mywin1="新窗口的地址为：";
+    if(mywin==true){
+        prompt(mywin1,"https://www.csdn.net/");
+        window.open('https://www.csdn.net/','_blank','width=400px,height=500px,menubar=no,toolbar=no');
+    }
+        else{
+          window.close();
+        }
+    }
+
+  </script> 
+ </head> 
+ <body> 
+	  <input type="button" value="新窗口打开网站" onclick="openWindow()" /> 
+ </body>
+</html>

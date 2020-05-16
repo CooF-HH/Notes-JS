@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Math </title>
+<script type="text/javascript">
+//向上取整 它返回的是大于或等于x，并且与x最接近的整数
+  document.write("向上取整："+Math.ceil(3.3) + "<br />")
+  document.write("向上取整："+Math.ceil(-0.1) + "<br />")
+  document.write("向上取整："+Math.ceil(-9.9) + "<br />")
+  document.write("向上取整："+Math.ceil(8.9) + "<br />")
+//向下取整 返回的是小于或等于x，并且与 x 最接近的整数
+  document.write("向下取整："+Math.floor(3.3)+ "<br>")
+  document.write("向下取整："+Math.floor(-0.1)+ "<br>")
+  document.write("向下取整："+Math.floor(-9.9)+ "<br>")
+  document.write("向下取整："+Math.floor(8.9)+ "<br>")
+//四舍五入 1. 返回与 x 最接近的整数。
+//2. 对于 0.5，该方法将进行上舍入。(5.5 将舍入为 6)
+//3. 如果 x 与两侧整数同等接近，则结果接近 +∞方向的数字值 。(如 -5.5 将舍入为 -5; -5.52 将舍入为 -6)
+  document.write("四舍五入："+Math.round(3.3)+ "<br>");
+  document.write("四舍五入："+Math.round(-0.1)+ "<br>");
+  document.write("四舍五入："+Math.round(-9.9)+ "<br>");
+  document.write("四舍五入："+Math.round(8.9)+ "<br>");
+//随机数random random() 方法可返回介于 0 ~ 1（大于或等于 0 但小于 1 )之间的一个随机数。
+ var num=(Math.random())*10;
+ document.write(num+"<br>"+Math.round(num));
+
+</script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Date对象 </title>
+<script type="text/javascript">
+//getFullYear()
+var mydate=new Date(); 
+var myyear= mydate.getFullYear();
+document.write("年份:"+myyear);
+//getDay()
+ var mydate=new Date();
+  var weekday=["星期日","星期一","星期二","星期三","星期四","星期五","星期六"];
+  var num=mydate.getDay();
+   document.write("今天是：" + mydate.getDay()+"<br/>");
+  document.write("今天是：" +weekday[num]);
+//get/setTime()  推迟时间：注意:1. 一小时 60 分，一分 60 秒，一秒 1000 毫秒  2. 时间推迟 1 小时,就是: “x.setTime(x.getTime() + 60 * 60 * 1000);”
+  var mydate=new Date();
+  document.write("当前时间："+mydate+"<br>");
+  mydate.setTime( mydate.getTime()  + 2* 60 * 60 * 1000);
+  document.write("推迟二小时时间：" + mydate);
+</script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <style type="text/css">
+    label{
+      font-family: "Microsoft Yahei";
+      color: black;
+      font-size: 15px;
+      font-weight: bold;
+    }
+    div{
+      width: 305px;
+      background: pink;
+    }
+  </style>
+  <title> 事件</title>  
+  <script type="text/javascript">
+   function count(){
+       var first=document.getElementById("txt1").value;
+       var se=document.getElementById("txt2").value;
+       var sel=document.getElementById("select").value;
+       var sum=0;
+    switch (sel){
+        case'+':sum=parseInt(first)+parseInt(se);break;
+        case"-":sum=parseInt(first)-parseInt(se);break;
+        case'*':sum=parseInt(first)*parseInt(se);break;
+        case"/":sum=parseInt(first)/parseInt(se);break;
+    }
+      document.getElementById('fruit').value = sum;
+   }
+  </script> 
+ </head> 
+ <body><div>
+  <label>第一个数字：</label>
+   <input type='text' id='txt1' /><br/>
+   <label>进行的运算：</label>
+   <select id='select'>
+  <option value='+'>+</option>
+  <option value="-">-</option>
+  <option value="*">*</option>
+  <option value="/">/</option>
+   </select><br/>
+   <label>第二个数字：</label>
+   <input type='text' id='txt2' /> <br/>
+   <label>运算的结果：</label>
+   <input type='button' value=' = '  onclick="count()"/> 
+   <input type='text' id="fruit" />   </div>
+ </body>
+</html>

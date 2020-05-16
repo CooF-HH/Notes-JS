@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>选项卡效果</title>
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        font: 12px normal "microsoft yahei";
+    }
+
+    #tabs {
+        width: 342px;
+        padding: 5px;
+        height: 150px;
+        margin: 20px;
+    }
+
+    #tabs ul {
+        list-style: none;
+        display: block;
+        /*此元素将显示为块级元素，此元素前后会带有换行符。*/
+        height: 30px;
+        line-height: 30px;
+        border-bottom: 2px saddlebrown solid;
+    }
+
+    #tabs ul li {
+        background: #fff;
+        cursor: pointer;
+        /*光标呈现为指示链接的指针（一只手）*/
+        float: left;
+            /*左浮动*/
+      
+        list-style: none;
+        height: 29px;
+        line-height: 29px;
+        margin: 0 15px;
+        border: 1px solid #aaa;
+        border-bottom: none;
+        display: inline-block;
+        /*行内块元素*/
+        width: 60px;
+        text-align: center;
+
+    }
+
+    #tabs ul li.on {
+        border-top: 2px solid saddlebrown;
+        border-bottom: 2px solid #fff;
+        border-left: 1px solid #aaa;
+        border-right: 1px solid #aaa;
+        color: saddlebrown;
+    }
+
+    #tabs div {
+        width: 330px;
+        height: 150px;
+        line-height: 25px;
+        border: 1px solid #336699;
+        border-top: none;
+        padding: 5px;
+        font-size: 14px;
+    }
+    .hide {
+        display: none;
+    }
+</style>
+
+<body>
+    <div id="tabs">
+        <ul>
+            <li class="on">房产</li>
+            <li>家居</li>
+            <li>二手房</li>
+        </ul>
+        <div class="">
+            275万购昌平邻铁三居 总价20万买一居<br/>
+            200万内购五环三居 140万安家东三环<br/>
+            北京首现零首付楼盘 53万购东5环50平<br/>
+            京楼盘直降5000 中信府 公园楼王现房
+        </div>
+        <div class="hide">
+            40平出租屋大改造 美少女的混搭小窝<br/>
+            经典清新简欧爱家 90平老房焕发新生<br/>
+            新中式的酷色温情 66平撞色活泼家居<br/>
+            瓷砖就像选好老婆 卫生间烟道的设计
+        </div>
+        <div class="hide">
+            通州豪华3居260万 二环稀缺2居250w甩<br/>
+            西3环通透2居290万 130万2居限量抢购<br/>
+            黄城根小学学区仅260万 121平70万抛!<br/>
+            独家别墅280万 苏州桥2居优惠价248万
+        </div>
+    </div>
+</body>
+<script type="text/javascript">
+    window.onload = function () {
+        var oLis = document.getElementsByTagName("li");
+        var oDIV = document.getElementsByTagName("div");
+        for (var i = 0; i < oLis.length; i++) {
+            //点击选项卡改变样式，切换div内容
+            oLis[i].index = i;
+            oLis[i].onclick = function () {
+                for (var n = 0; n < oLis.length; n++) {
+                    oLis[n].className = "";
+                    oDIV[n+1].className="hide";
+                }
+                    this.className = "on";
+                    // oDIV[this.index+1].className="";
+                    console.log(oDIV[this.index+1].className);
+                    oDIV[this.index+1].removeAttribute("class");
+            }
+        }
+    }
+</script>
+
+
+</html>
